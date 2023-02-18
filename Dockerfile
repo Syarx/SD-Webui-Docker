@@ -60,5 +60,7 @@ ADD webui-user.sh .
 ADD start.sh /start.sh
 RUN chmod a+x /start.sh
 
+EXPOSE 22
+
 SHELL ["/bin/bash", "--login", "-c"]
 CMD [ "/start.sh" ]
