@@ -10,7 +10,7 @@ install_dir="/workspace"
 #clone_dir="stable-diffusion-webui"
 
 # Commandline arguments for webui.py, for example: export COMMANDLINE_ARGS="--medvram --opt-split-attention"
-export COMMANDLINE_ARGS="--port 3000 --xformers --ckpt /workspace/v2-1_768-ema-pruned.ckpt --listen --enable-insecure-extension-access --precision full --no-half --no-half-vae"
+export COMMANDLINE_ARGS="--port 3000 --xformers --listen --enable-insecure-extension-access --precision full --no-half --no-half-vae"
 
 # python3 executable
 #python_cmd="python3"
