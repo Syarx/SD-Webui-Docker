@@ -45,8 +45,8 @@ ENV PATH="/workspace/stable-diffusion-webui/venv/bin:$PATH"
 
 RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 RUN python get-pip.py
-RUN pip install -U jupyterlab ipywidgets jupyter-archive
-RUN jupyter nbextension enable --py widgetsnbextension
+# RUN pip install -U jupyterlab ipywidgets jupyter-archive
+# RUN jupyter nbextension enable --py widgetsnbextension
 
 ADD install.py .
 RUN python -m install --skip-torch-cuda-test
@@ -60,7 +60,7 @@ ADD webui-user.sh .
 ADD start.sh /start.sh
 RUN chmod a+x /start.sh
 
-EXPOSE 22
+EXPOSE 22 3000 7860
 
 SHELL ["/bin/bash", "--login", "-c"]
 CMD [ "/start.sh" ]
