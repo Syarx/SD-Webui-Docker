@@ -33,9 +33,9 @@ WORKDIR /workspace
 
 RUN git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
 
-RUN git clone https://github.com/camenduru/sd-civitai-browser /workspace/stable-diffusion-webui/extensions/
-RUN git clone https://github.com/d8ahazard/sd_dreambooth_extension /workspace/stable-diffusion-webui/extensions/
-RUN git clone https://github.com/camenduru/stable-diffusion-webui-huggingface /workspace/stable-diffusion-webui/extensions/
+RUN git clone https://github.com/camenduru/sd-civitai-browser /workspace/stable-diffusion-webui/extensions/sd-civitai-browser
+RUN git clone https://github.com/d8ahazard/sd_dreambooth_extension /workspace/stable-diffusion-webui/extensions/sd_dreambooth_extension
+RUN git clone https://github.com/camenduru/stable-diffusion-webui-huggingface /workspace/stable-diffusion-webui/extensions/stable-diffusion-webui-huggingface
 RUN wget https://huggingface.co/Lykon/DreamShaper/resolve/main/Dreamshaper_3.32_baked_vae_clip_fix_half.ckpt /workspace/stable-diffusion-webui/models/Stable-diffusion/
 
 WORKDIR /workspace/stable-diffusion-webui
